@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Success</title>
+</head>
+<body>
+<h1>Registration Successful!</h1>
+<p>Your registration has been successfully completed.</p>
+
+<p>Thank you for registering. You can now <a href="/register">go back to the registration form</a>.</p>
+
+<script>
+    // Optionally, add a redirect or auto-refresh functionality
+    setTimeout(function(){
+        window.location.href = "/register"; // Redirect to the home page after 3 seconds
+    }, 3000);
+</script>
+</body>
+</html>

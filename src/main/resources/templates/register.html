@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <script>
+    // Function to clear the error message when user starts typing in the input field
+    function clearError(inputField) {
+      let errorMessage = inputField.nextElementSibling;
+      if (errorMessage && errorMessage.tagName === 'P') {
+        errorMessage.innerHTML = ''; // Clear error message
+      }
+    }
+  </script>
+</head>
+<body>
+<h1>Register Student</h1>
+
+<form th:action="@{/register}" th:object="${student}" method="post">
+
+  <label>Name:</label>
+  <input type="text" th:field="*{name}" oninput="clearError(this)" />
+  <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p><br/>
+
+  <label>Email:</label>
+  <input type="email" th:field="*{email}" oninput="clearError(this)" />
+  <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p><br/>
+
+  <label>Age:</label>
+  <input type="number" th:field="*{age}" oninput="clearError(this)" />
+  <p th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></p><br/>
+
+  <label>Course:</label>
+  <input type="text" th:field="*{course}" oninput="clearError(this)" />
+  <p th:if="${#fields.hasErrors('course')}" th:errors="*{course}"></p><br/>
+
+  <button type="submit">Register</button>
+</form>
+</body>
+</html>

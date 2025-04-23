@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+</head>
+<body>
+<h1>Edit Student</h1>
+
+<form action="#" th:action="@{/students/update/{id}(id=${student.id})}" method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" th:value="${student.name}" required />
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" th:value="${student.email}" required />
+    </div>
+    <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" th:value="${student.age}" min="18" max="60" required />
+    </div>
+    <div>
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course" th:value="${student.course}" required />
+    </div>
+    <div>
+        <button type="submit">Save Changes</button>
+    </div>
+</form>
+
+<br/>
+<a href="/students">Back to Student List</a>
+</body>
+</html>
