@@ -1,0 +1,131 @@
+/* Reset some default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  padding: 40px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+/* Form styling */
+form {
+  max-width: 500px;
+  margin: auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+p[th\\:if] {
+  color: #e74c3c;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+
+/* Button styling */
+button,
+.button-link {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+button:hover,
+.button-link:hover {
+  background-color: #2980b9;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Message and card-style layout */
+.message {
+  text-align: center;
+  color: green;
+  margin-top: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

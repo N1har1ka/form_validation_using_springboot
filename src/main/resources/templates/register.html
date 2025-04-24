@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
   <title>Register</title>
   <script>
     // Function to clear the error message when user starts typing in the input field
@@ -15,6 +16,8 @@
 </head>
 <body>
 <h1>Register Student</h1>
+<!-- Display global error message -->
+<div th:if="${error}" th:text="${error}" style="color: red;"></div>
 
 <form th:action="@{/register}" th:object="${student}" method="post">
 
